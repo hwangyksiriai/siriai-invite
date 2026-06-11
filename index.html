@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIRIAI 6월 통합 캠페인 | 루솜 · 잇퓨 · 야다</title>
+    <meta name="description" content="루솜(LUSOM), 잇퓨(it:fu), 야다(YADAH) 캠페인 인플루언서 통합 모집. 전속 대행사 시리아이(SIRIAI) 주관.">
+    <meta property="og:title" content="SIRIAI 6월 통합 캠페인 | 루솜 · 잇퓨 · 야다">
+    <meta property="og:description" content="루솜·잇퓨·야다 클린뷰티 캠페인에 한 번에 지원하세요. 중복 지원 가능 · 본 캠페인은 시리아이(SIRIAI)가 주관합니다.">
+    <meta property="og:image" content="https://itfu-guideline.vercel.app/image/%EB%B0%B0%EB%84%88.PNG">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
+    <style>
+        :root {
+            /* Clean-beauty editorial theme */
+            --ink: #1b1a17;          /* primary near-black */
+            --accent: #4e6850;       /* forest sage — nature / vegan */
+            --accent-deep: #3c5240;
+            --accent-soft-bg: #eef2ec;
+            --accent-soft-border: #cdd8c8;
+
+            --bg-base: #f2f1ec;
+            --surface: #ffffff;
+            --surface-muted: #faf9f6;
+            --border: #e6e4dd;
+
+            --text-primary: #1b1a17;
+            --text-secondary: #57544c;
+            --text-muted: #9a968c;
+
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 8px;
+            --shadow-soft: 0 10px 36px rgba(27,26,23,0.06);
+            --transition: all 0.25s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard Variable', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: #e2ded7;
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+            letter-spacing: -0.015em;
+        }
+
+        /* App-card shell */
+        .shell {
+            width: 100%;
+            max-width: 472px;
+            margin: 0 auto;
+            min-height: 100vh;
+            background: var(--bg-base);
+            box-shadow: 0 0 90px rgba(27,26,23,0.13);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===== App bar ===== */
+        .appbar {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 1.05rem 1.25rem;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            position: relative; z-index: 30;
+        }
+        .ab-brand { display: flex; align-items: baseline; gap: 0.5rem; }
+        .ab-brand .mark { font-size: 1.04rem; font-weight: 800; letter-spacing: -0.02em; }
+        .ab-brand .sub { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); font-weight: 700; }
+        .ab-status { display: inline-flex; align-items: center; gap: 7px; font-size: 0.78rem; font-weight: 700; color: var(--accent-deep); }
+        .ab-status::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft-bg); }
+
+        /* ===== Hero (editorial photo) ===== */
+        .hero {
+            position: relative;
+            height: clamp(430px, 108vw, 540px);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            overflow: hidden;
+            background: #d8d4cd;
+        }
+        .hero-media { position: absolute; inset: 0; background: #d8d4cd; }
+        .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: center 24%; }
+        .hero-veil {
+            position: absolute; inset: 0;
+            background: linear-gradient(180deg, rgba(15,14,11,0.10) 0%, rgba(15,14,11,0) 34%, rgba(15,14,11,0.55) 74%, rgba(15,14,11,0.90) 100%);
+        }
+        .hero-copy { position: relative; z-index: 2; padding: 1.5rem 1.4rem 1.7rem; color: #fff; }
+        .hero-eyebrow {
+            display: block; font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase;
+            font-weight: 700; color: rgba(255,255,255,0.74); margin-bottom: 0.7rem;
+        }
+        .hero-title { font-size: 1.92rem; font-weight: 800; line-height: 1.22; letter-spacing: -0.03em; margin-bottom: 0.8rem; }
+        .hero-meta { font-size: 0.84rem; line-height: 1.55; color: rgba(255,255,255,0.84); font-weight: 500; word-break: keep-all; }
+        .hero-meta b { color: #fff; font-weight: 700; }
+
+        /* ===== Container ===== */
+        .app-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            padding: 1.25rem 1.15rem 4rem;
+            width: 100%;
+            position: relative;
+            z-index: 20;
+        }
+
+        .form-step { display: none; width: 100%; }
+        .form-step.active {
+            display: flex;
+            flex-direction: column;
+            animation: slideUp 0.5s cubic-bezier(0.16,1,0.3,1) forwards;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .panel {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: 2.4rem 1.7rem;
+            width: 100%;
+            box-shadow: var(--shadow-soft);
+            margin-bottom: 1.6rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            word-break: keep-all;
+        }
+        .subtitle {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.9rem;
+            line-height: 1.65;
+            word-break: keep-all;
+        }
+        .intro-lead {
+            font-size: 1rem;
+            line-height: 1.7;
+            text-align: center;
+            word-break: keep-all;
+            margin-bottom: 1.6rem;
+        }
+        .intro-lead strong { color: var(--accent-deep); }
+        .intro-body {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-size: 0.92rem;
+            text-align: center;
+            word-break: keep-all;
+            margin-bottom: 2rem;
+        }
+        .req { color: var(--accent); }
+
+        /* ===== Intro head (editorial) ===== */
+        .intro-head { text-align: center; margin-bottom: 1.6rem; }
+        .intro-eyebrow {
+            display: inline-block; font-size: 0.68rem; letter-spacing: 0.24em;
+            text-transform: uppercase; font-weight: 700; color: var(--accent);
+            margin-bottom: 0.95rem;
+        }
+        .intro-title {
+            font-size: 1.84rem; font-weight: 800; line-height: 1.32;
+            letter-spacing: -0.025em; margin-bottom: 0.85rem; word-break: keep-all;
+        }
+        .intro-title em { font-style: normal; color: var(--accent); }
+        .intro-tagline {
+            font-size: 0.91rem; color: var(--text-secondary);
+            line-height: 1.65; word-break: keep-all;
+        }
+        .intro-divider { height: 1px; background: var(--border); margin: 1.7rem 0; }
+        .intro-lead-text { font-size: 0.92rem; line-height: 1.72; color: var(--text-secondary); word-break: keep-all; margin-bottom: 1.7rem; }
+        .intro-lead-text b { color: var(--text-primary); font-weight: 700; }
+
+        /* how it works */
+        .steps-strip {
+            display: flex; align-items: stretch;
+            background: var(--surface-muted);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 0.4rem; margin-bottom: 2rem;
+        }
+        .step-mini { flex: 1; display: flex; align-items: center; gap: 0.55rem; padding: 0.55rem 0.5rem; min-width: 0; }
+        .step-mini + .step-mini { border-left: 1px solid var(--border); }
+        .step-mini .num {
+            width: 23px; height: 23px; flex-shrink: 0; border-radius: 50%;
+            background: var(--ink); color: #fff; font-size: 0.76rem; font-weight: 700;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .step-mini .st-txt { min-width: 0; }
+        .step-mini b { display: block; font-size: 0.8rem; font-weight: 700; line-height: 1.2; white-space: nowrap; }
+        .step-mini small { display: block; font-size: 0.68rem; color: var(--text-muted); margin-top: 1px; white-space: nowrap; }
+
+        /* section label */
+        .section-label {
+            display: flex; align-items: center; gap: 0.5rem;
+            font-size: 0.96rem; font-weight: 700; margin-bottom: 1rem;
+        }
+        .section-label .count {
+            font-size: 0.72rem; font-weight: 700; color: #fff; background: var(--accent);
+            border-radius: 999px; min-width: 18px; height: 18px; padding: 0 5px;
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .section-label .line { flex: 1; height: 1px; background: var(--border); }
+
+        /* ===== Campaign card (intro) ===== */
+        .campaign-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            margin-bottom: 1.1rem;
+            background: var(--surface);
+            transition: var(--transition);
+        }
+        .campaign-card:hover { border-color: #d6d3c9; box-shadow: 0 6px 22px rgba(27,26,23,0.05); }
+        .cc-thumb {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            background: var(--surface-muted);
+            display: block;
+        }
+        .cc-body { padding: 1.2rem 1.25rem 1.3rem; }
+        .cc-head {
+            display: flex; align-items: baseline; gap: 0.5rem; flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        .cc-no {
+            font-family: 'Times New Roman', serif;
+            font-size: 0.95rem; font-weight: 700; color: var(--accent);
+        }
+        .cc-name { font-size: 1.1rem; font-weight: 700; }
+        .cc-en { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; }
+        .cc-desc {
+            font-size: 0.86rem; color: var(--text-secondary);
+            line-height: 1.55; word-break: keep-all; margin-bottom: 0.95rem;
+        }
+        .chip-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+        .chip {
+            font-size: 0.76rem; font-weight: 600;
+            color: var(--text-secondary);
+            background: var(--surface-muted);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 0.34rem 0.7rem;
+            display: inline-flex; align-items: center; gap: 5px;
+        }
+        .chip.fee { color: var(--accent-deep); background: var(--accent-soft-bg); border-color: var(--accent-soft-border); }
+        .cc-detail-btn {
+            width: 100%;
+            border: 1px solid var(--ink);
+            background: var(--surface);
+            color: var(--ink);
+            font-family: inherit;
+            font-size: 0.86rem; font-weight: 600;
+            padding: 0.78rem 1rem;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center; gap: 7px;
+            transition: var(--transition);
+        }
+        .cc-detail-btn:hover { background: var(--ink); color: #fff; }
+        .cc-detail-btn svg { width: 15px; height: 15px; }
+
+        /* ===== Option cards (checkbox / radio) ===== */
+        .input-group { margin-bottom: 1.7rem; width: 100%; }
+        .option-card { display: block; margin-bottom: 0.75rem; cursor: pointer; }
+        .option-card input { display: none; }
+        .option-content {
+            display: flex; align-items: center;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 0.95rem 1.05rem;
+            transition: all 0.2s ease;
+        }
+        .option-card input:not(:checked) + .option-content:hover { border-color: #c9c5ba; background: var(--surface-muted); }
+        .option-card input:checked + .option-content {
+            border-color: var(--accent);
+            background: var(--accent-soft-bg);
+            box-shadow: 0 0 0 1px var(--accent);
+        }
+        .opt-thumb {
+            width: 46px; height: 46px; border-radius: 10px;
+            object-fit: cover; flex-shrink: 0; margin-right: 0.85rem;
+            border: 1px solid var(--border); background: var(--surface-muted);
+        }
+        .indicator-check {
+            width: 22px; height: 22px; border-radius: 6px;
+            border: 1.5px solid #c5c1b6; margin-left: 0.6rem;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0; transition: var(--transition);
+        }
+        .option-card input:checked + .option-content .indicator-check,
+        .accordion-header input:checked + .indicator-check {
+            background: var(--accent); border-color: var(--accent);
+        }
+        .option-card input:checked + .option-content .indicator-check::after,
+        .accordion-header input:checked + .indicator-check::after {
+            content: ''; width: 5px; height: 10px;
+            border: solid white; border-width: 0 2px 2px 0;
+            transform: rotate(45deg); margin-bottom: 2px;
+        }
+        .opt-text { flex: 1; min-width: 0; }
+        .opt-title { font-weight: 700; font-size: 0.95rem; display: block; margin-bottom: 0.15rem; }
+        .opt-sub { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.4; }
+
+        /* select-all helper */
+        .select-all {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0.5rem 0.2rem 1rem; margin-bottom: 0.3rem;
+        }
+        .select-all .hint { font-size: 0.82rem; color: var(--text-muted); }
+        .toggle-all {
+            font-size: 0.82rem; font-weight: 600; color: var(--accent-deep);
+            background: var(--accent-soft-bg); border: 1px solid var(--accent-soft-border);
+            border-radius: 999px; padding: 0.4rem 0.85rem; cursor: pointer; transition: var(--transition);
+        }
+        .toggle-all:hover { background: #e4ebe1; }
+
+        .recommend-note {
+            margin-top: 0.4rem;
+            font-size: 0.82rem; color: var(--accent-deep);
+            background: var(--accent-soft-bg);
+            border: 1px solid var(--accent-soft-border);
+            border-radius: var(--radius-sm);
+            padding: 0.75rem 0.9rem; line-height: 1.55; word-break: keep-all;
+            display: flex; gap: 7px; align-items: flex-start;
+        }
+
+        /* ===== Inputs ===== */
+        .label-text { display: block; font-size: 0.92rem; font-weight: 600; margin-bottom: 0.55rem; }
+        .label-desc { font-size: 0.82rem; color: var(--text-muted); margin: -0.2rem 0 0.7rem; display: block; }
+        .form-control {
+            width: 100%;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 0.95rem 1.05rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: var(--transition);
+            outline: none;
+        }
+        select.form-control {
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231b1a17%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+            background-repeat: no-repeat;
+            background-position: right 1.05rem top 50%;
+            background-size: 0.62rem auto;
+            cursor: pointer;
+        }
+        .form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+        .form-control::placeholder { color: #bdbab1; }
+        textarea.form-control { resize: vertical; min-height: 88px; }
+
+        /* ===== Buttons ===== */
+        .btn-wrapper { display: flex; gap: 0.8rem; margin-top: 2.2rem; }
+        .btn {
+            padding: 1.05rem 1.6rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.98rem; font-weight: 600;
+            cursor: pointer; transition: var(--transition);
+            border: none; outline: none;
+            display: inline-flex; align-items: center; justify-content: center;
+        }
+        .btn-primary { background: var(--ink); color: #fff; flex: 1; }
+        .btn-primary:active { transform: scale(0.99); }
+        .btn-secondary { background: var(--surface); color: var(--text-primary); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: var(--surface-muted); }
+        .btn-block { width: 100%; padding: 1.15rem; }
+
+        /* ===== Progress ===== */
+        .progress-wrapper { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: rgba(0,0,0,0.08); z-index: 100; }
+        .progress-bar { height: 100%; background: var(--accent); width: 0%; transition: width 0.4s ease; }
+
+        /* ===== Error ===== */
+        .error-msg { color: #c0392b; font-size: 0.8rem; margin-top: 0.45rem; display: none; font-weight: 500; }
+        .has-error .form-control { border-color: #c0392b; }
+        .has-error .error-msg { display: block; }
+
+        /* ===== Accordion (partnership) ===== */
+        .accordion-item {
+            border: 1px solid var(--border); border-radius: var(--radius-md);
+            margin-bottom: 0.8rem; background: var(--surface); transition: var(--transition);
+        }
+        .accordion-item.recommended { background: var(--accent-soft-bg); border-color: var(--accent-soft-border); }
+        .accordion-header { display: flex; align-items: flex-start; padding: 1.1rem 1.15rem; cursor: pointer; }
+        .accordion-header input { display: none; }
+        .accordion-header .indicator-check { margin-left: 0; margin-right: 0.8rem; margin-top: 1px; }
+        .acc-title { font-weight: 600; font-size: 0.92rem; flex: 1; line-height: 1.4; word-break: keep-all; }
+        .acc-toggle {
+            background: transparent; border: none; width: 26px; height: 26px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; color: var(--text-muted); transition: var(--transition); flex-shrink: 0;
+        }
+        .acc-toggle.open { transform: rotate(180deg); }
+        .accordion-body { display: none; padding: 0 1.15rem 1.2rem 3.05rem; font-size: 0.84rem; color: var(--text-secondary); line-height: 1.6; }
+        .badge { display: inline-block; background: var(--accent); color: #fff; font-size: 0.68rem; font-weight: 700; padding: 0.18rem 0.46rem; border-radius: 4px; margin-left: 0.35rem; vertical-align: middle; }
+
+        .fine-print { margin-top: 1.7rem; padding-top: 1.2rem; border-top: 1px solid var(--border); font-size: 0.79rem; color: var(--text-muted); line-height: 1.65; }
+        .footer-brand { text-align: center; color: #b6b2a8; font-size: 0.78rem; line-height: 1.6; margin-top: 0.6rem; }
+
+        /* ===== Bottom sheet ===== */
+        .sheet-overlay { position: fixed; inset: 0; background: rgba(20,19,15,0.45); backdrop-filter: blur(4px); z-index: 999; opacity: 0; visibility: hidden; transition: all 0.3s ease; }
+        .sheet-overlay.active { opacity: 1; visibility: visible; }
+        .sheet { position: fixed; bottom: -100%; left: 50%; transform: translateX(-50%); width: 100%; max-width: 472px; max-height: 88vh; background: var(--surface); border-radius: 22px 22px 0 0; z-index: 1000; transition: bottom 0.4s cubic-bezier(0.2,0.8,0.2,1); display: flex; flex-direction: column; box-shadow: 0 -8px 30px rgba(0,0,0,0.18); }
+        .sheet.active { bottom: 0; }
+        .sheet-grip { width: 38px; height: 4px; border-radius: 99px; background: #ddd9cf; margin: 10px auto 0; flex-shrink: 0; }
+        .sheet-hero { width: 100%; height: 168px; object-fit: cover; }
+        .sheet-head { padding: 1.2rem 1.4rem 0.6rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+        .sheet-head h3 { font-size: 1.2rem; font-weight: 700; }
+        .sheet-head .en { font-size: 0.78rem; color: var(--text-muted); font-weight: 500; margin-top: 2px; }
+        .sheet-close { background: var(--surface-muted); border: 1px solid var(--border); width: 30px; height: 30px; border-radius: 50%; font-size: 1rem; color: #888; cursor: pointer; flex-shrink: 0; line-height: 1; display: flex; align-items: center; justify-content: center; }
+        .sheet-content { padding: 0.8rem 1.4rem 3.5rem; overflow-y: auto; flex: 1; }
+        .sheet-section { margin-bottom: 1.3rem; }
+        .sheet-section h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.6rem; display: flex; align-items: center; gap: 6px; }
+        .sheet-section p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; word-break: keep-all; }
+        .sheet-section ul { list-style: none; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+        .sheet-section ul li { padding-left: 1.1em; position: relative; margin-bottom: 0.3rem; word-break: keep-all; }
+        .sheet-section ul li::before { content: '✓'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+        .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .tag { font-size: 0.78rem; font-weight: 600; color: var(--accent-deep); background: var(--accent-soft-bg); border: 1px solid var(--accent-soft-border); border-radius: 6px; padding: 0.3rem 0.55rem; }
+        .ref-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .ref-link { display: inline-flex; align-items: center; gap: 5px; font-size: 0.82rem; font-weight: 600; color: var(--ink); text-decoration: none; background: var(--surface-muted); border: 1px solid var(--border); border-radius: 6px; padding: 0.45rem 0.7rem; }
+        .ref-link svg { width: 13px; height: 13px; opacity: 0.6; }
+        .guide-link { display: flex; align-items: center; justify-content: center; gap: 7px; width: 100%; font-size: 0.86rem; font-weight: 600; color: #fff; background: var(--ink); text-decoration: none; padding: 0.85rem; border-radius: var(--radius-sm); margin-top: 0.4rem; }
+        .cond-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; }
+        .cond-box { background: var(--surface-muted); border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 0.8rem; }
+        .cond-box .k { font-size: 0.72rem; color: var(--text-muted); font-weight: 600; margin-bottom: 0.2rem; }
+        .cond-box .v { font-size: 0.88rem; font-weight: 700; color: var(--text-primary); }
+        .cond-box.full { grid-column: 1 / -1; }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div class="progress-wrapper"><div class="progress-bar" id="progressBar"></div></div>
+
+  <div class="shell">
+
+    <!-- ===== APP BAR ===== -->
+    <header class="appbar">
+        <div class="ab-brand"><span class="mark">SIRIAI</span><span class="sub">Clean Beauty</span></div>
+        <span class="ab-status">모집 중</span>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-media">
+            <img src="images/main.jpg" alt="SIRIAI 클린뷰티 캠페인" loading="eager">
+        </div>
+        <div class="hero-veil"></div>
+        <div class="hero-copy">
+            <span class="hero-eyebrow">LUSOM · it:fu · YADAH — Presented by SIRIAI</span>
+            <h1 class="hero-title">2026 6월<br>클린뷰티 크리에이터 모집</h1>
+            <p class="hero-meta"><b>팔로워 기준 없음</b> · 인스타그램 릴스 중심<br>선정 시 <b>제품 + 고료 50,000원</b> 지급</p>
+        </div>
+    </section>
+
+    <div class="app-container">
+
+        <!-- ===== STEP 0 : INTRO ===== -->
+        <div class="form-step active" id="step-0">
+            <div class="panel">
+                <p class="intro-lead-text">
+                    <b>한 번의 지원서</b>로 루솜 · 잇퓨 · 야다 세 캠페인에 동시 지원할 수 있어요.
+                    아래에서 각 캠페인의 핵심 이미지와 조건을 확인하고, 원하는 캠페인을 <b>중복 선택</b>하세요.
+                </p>
+
+                <div class="steps-strip">
+                    <div class="step-mini"><span class="num">1</span><div class="st-txt"><b>캠페인 확인</b><small>이미지 · 조건</small></div></div>
+                    <div class="step-mini"><span class="num">2</span><div class="st-txt"><b>중복 선택</b><small>원하는 만큼</small></div></div>
+                    <div class="step-mini"><span class="num">3</span><div class="st-txt"><b>정보 입력</b><small>1분 소요</small></div></div>
+                </div>
+
+                <div class="section-label">지원 가능 캠페인 <span class="count">3</span><span class="line"></span></div>
+
+                <!-- ① 루솜 -->
+                <div class="campaign-card">
+                    <img class="cc-thumb" src="https://lusom-guide.vercel.app/image/%EB%B0%B0%EB%84%881-1.png" alt="루솜 배너" loading="lazy">
+                    <div class="cc-body">
+                        <div class="cc-head"><span class="cc-no">①</span><span class="cc-name">루솜</span><span class="cc-en">LUSOM</span></div>
+                        <p class="cc-desc">‘Let’s Love Nature’ — 피부와 환경을 함께 생각하는 비건 클린뷰티 브랜드. 대표 제품은 ‘발효미 토너패드(찹쌀떡 패드)’.</p>
+                        <div class="chip-row">
+                            <span class="chip">📅 6.18 – 6.22</span>
+                            <span class="chip">🎬 Reels</span>
+                            <span class="chip fee">₩ 50,000</span>
+                        </div>
+                        <button type="button" class="cc-detail-btn" onclick="openSheet('sheet-lusom')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            캠페인 상세 보기
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ② 잇퓨 -->
+                <div class="campaign-card">
+                    <img class="cc-thumb" src="https://itfu-guideline.vercel.app/image/%EB%B0%B0%EB%84%88.PNG" alt="잇퓨 배너" loading="lazy">
+                    <div class="cc-body">
+                        <div class="cc-head"><span class="cc-no">②</span><span class="cc-name">잇퓨</span><span class="cc-en">it:fu</span></div>
+                        <p class="cc-desc">무신사 입점 · 지그재그 주목 스킨케어 브랜드. 약국·피부과 입점, 대표 ‘순율크림’은 쿠팡·네이버·지그재그 1위 달성.</p>
+                        <div class="chip-row">
+                            <span class="chip">📅 6.24 – 6.27</span>
+                            <span class="chip">🎬 Reels</span>
+                            <span class="chip fee">₩ 50,000</span>
+                        </div>
+                        <button type="button" class="cc-detail-btn" onclick="openSheet('sheet-itfu')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            캠페인 상세 보기
+                        </button>
+                    </div>
+                </div>
+
+                <!-- ③ 야다 -->
+                <div class="campaign-card">
+                    <img class="cc-thumb" src="https://yadah-guide.vercel.app/campaign-a/%EB%B0%B0%EB%84%88.png" alt="야다 배너" loading="lazy">
+                    <div class="cc-body">
+                        <div class="cc-head"><span class="cc-no">③</span><span class="cc-name">야다</span><span class="cc-en">YADAH</span></div>
+                        <p class="cc-desc">히브리어로 ‘알다, 경험하다’를 뜻하는 비건 스킨케어 브랜드. 30개국·1,300여 채널 입점. 대표 ‘그린티 퓨어 클렌징밤’.</p>
+                        <div class="chip-row">
+                            <span class="chip">📅 6.24 – 6.26</span>
+                            <span class="chip">🎬 Reels</span>
+                            <span class="chip fee">₩ 50,000</span>
+                        </div>
+                        <button type="button" class="cc-detail-btn" onclick="openSheet('sheet-yadah')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            캠페인 상세 보기
+                        </button>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-block" style="margin-top: 1.6rem;" onclick="nextStep()">
+                    안내 확인 완료 · 지원 시작하기
+                </button>
+            </div>
+            <div class="footer-brand">Presented by SIRIAI · 시리아이</div>
+        </div>
+
+        <!-- ===== STEP 1 : CAMPAIGN MULTI-SELECT ===== -->
+        <div class="form-step" id="step-1">
+            <div class="panel">
+                <h2>지원할 캠페인 선택 <span class="req">*</span></h2>
+                <p class="subtitle">원하시는 캠페인을 <strong>모두 선택</strong>해 주세요. 중복 선택 시 선정 확률이 높아집니다.</p>
+
+                <div class="select-all">
+                    <span class="hint">3개 캠페인 동시 지원 가능</span>
+                    <button type="button" class="toggle-all" id="toggleAll" onclick="toggleAllCampaigns()">전체 선택</button>
+                </div>
+
+                <div class="input-group" id="group-campaign">
+                    <label class="option-card">
+                        <input type="checkbox" name="campaign" value="루솜 (LUSOM)">
+                        <div class="option-content">
+                            <img class="opt-thumb" src="https://lusom-guide.vercel.app/image/%EB%B0%B0%EB%84%881-1.png" alt="" loading="lazy">
+                            <div class="opt-text">
+                                <span class="opt-title">① 루솜 <span style="font-weight:500;color:var(--text-muted);font-size:0.8rem;">LUSOM</span></span>
+                                <span class="opt-sub">비건 클린뷰티 · 6.18–6.22 · ₩50,000</span>
+                            </div>
+                            <div class="indicator-check"></div>
+                        </div>
+                    </label>
+
+                    <label class="option-card">
+                        <input type="checkbox" name="campaign" value="잇퓨 (it:fu)">
+                        <div class="option-content">
+                            <img class="opt-thumb" src="https://itfu-guideline.vercel.app/image/%EB%B0%B0%EB%84%88.PNG" alt="" loading="lazy">
+                            <div class="opt-text">
+                                <span class="opt-title">② 잇퓨 <span style="font-weight:500;color:var(--text-muted);font-size:0.8rem;">it:fu</span></span>
+                                <span class="opt-sub">무신사 입점 스킨케어 · 6.24–6.27 · ₩50,000</span>
+                            </div>
+                            <div class="indicator-check"></div>
+                        </div>
+                    </label>
+
+                    <label class="option-card">
+                        <input type="checkbox" name="campaign" value="야다 (YADAH)">
+                        <div class="option-content">
+                            <img class="opt-thumb" src="https://yadah-guide.vercel.app/campaign-a/%EB%B0%B0%EB%84%88.png" alt="" loading="lazy">
+                            <div class="opt-text">
+                                <span class="opt-title">③ 야다 <span style="font-weight:500;color:var(--text-muted);font-size:0.8rem;">YADAH</span></span>
+                                <span class="opt-sub">비건 클렌징밤 · 6.24–6.26 · ₩50,000</span>
+                            </div>
+                            <div class="indicator-check"></div>
+                        </div>
+                    </label>
+                    <div class="error-msg">하나 이상의 캠페인을 선택해 주세요.</div>
+                </div>
+
+                <div class="recommend-note">
+                    <span>✦</span>
+                    <span>크리에이터님의 무드와 가장 시너지가 큰 브랜드에 우선 배정해 드립니다. 여러 캠페인을 함께 선택하시면 그만큼 선정 기회가 넓어집니다.</span>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep()">이전</button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">다음으로</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== STEP 2 : CREATOR INFO ===== -->
+        <div class="form-step" id="step-2">
+            <div class="panel">
+                <h2>크리에이터 정보</h2>
+                <p class="subtitle">제품 발송 및 개별 연락을 위한 기본 정보를 기재해 주세요.</p>
+
+                <div class="input-group" id="group-terms" style="margin-bottom: 2.1rem;">
+                    <label class="option-card" style="margin:0;">
+                        <input type="checkbox" id="term_main">
+                        <div class="option-content" style="background: var(--surface-muted);">
+                            <div class="opt-text">
+                                <span class="opt-title" style="font-size:0.92rem;">[필수] 캠페인 운영 정책 동의</span>
+                                <span class="opt-sub">선택한 캠페인별 가이드라인과 고료 조건(업로드 일정 미준수 시 고료 미지급 등)을 확인했으며 이에 동의합니다.</span>
+                            </div>
+                            <div class="indicator-check"></div>
+                        </div>
+                    </label>
+                    <div class="error-msg" style="margin-left:0.3rem;">필수 동의 항목입니다.</div>
+                </div>
+
+                <div class="input-group" id="group-name">
+                    <label class="label-text">성함 (본명) <span class="req">*</span></label>
+                    <input type="text" id="inf_name" class="form-control" placeholder="홍길동">
+                    <div class="error-msg">성함을 입력해 주세요.</div>
+                </div>
+
+                <div class="input-group" id="group-phone">
+                    <label class="label-text">전화번호 <span class="req">*</span></label>
+                    <input type="tel" id="inf_phone" class="form-control" placeholder="010-0000-0000">
+                    <div class="error-msg">연락처를 기재해 주세요.</div>
+                </div>
+
+                <div class="input-group" id="group-age">
+                    <label class="label-text">연령대 <span class="req">*</span></label>
+                    <select id="inf_age" class="form-control">
+                        <option value="" disabled selected>연령대 선택</option>
+                        <option value="10대">10대</option>
+                        <option value="20대">20대</option>
+                        <option value="30대">30대</option>
+                        <option value="40대">40대</option>
+                        <option value="50대 이상">50대 이상</option>
+                    </select>
+                    <div class="error-msg">연령대를 선택해 주세요.</div>
+                </div>
+
+                <div class="input-group" id="group-address" style="margin-bottom:0;">
+                    <label class="label-text">배송지 주소 <span class="req">*</span></label>
+                    <input type="text" id="inf_address" class="form-control" placeholder="우편번호 포함 상세 주소를 정확히 기재해 주세요">
+                    <div class="error-msg">배송지 주소를 입력해 주세요.</div>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep()">이전</button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">다음으로</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== STEP 3 : CHANNELS ===== -->
+        <div class="form-step" id="step-3">
+            <div class="panel">
+                <h2>활동 채널 링크</h2>
+                <p class="subtitle">협업을 진행할 크리에이터님의 포트폴리오를 공유해 주세요.</p>
+
+                <div class="input-group" id="group-insta">
+                    <label class="label-text">대표 인스타그램 링크 <span class="req">*</span></label>
+                    <input type="url" id="inf_insta" class="form-control" placeholder="https://instagram.com/아이디">
+                    <div class="error-msg">올바른 URL(http/https)로 입력해 주세요.</div>
+                </div>
+
+                <div class="input-group" style="margin-bottom:0;">
+                    <label class="label-text">기타 플랫폼 (선택)</label>
+                    <span class="label-desc">유튜브 · 틱톡 · 블로그 등 추가 검토를 원하시는 채널</span>
+                    <textarea id="inf_others" class="form-control" placeholder="링크를 자유롭게 기재해 주세요."></textarea>
+                </div>
+
+                <div class="btn-wrapper">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep()">이전</button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">다음으로</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== STEP 4 : PARTNERSHIP + SUBMIT ===== -->
+        <div class="form-step" id="step-4">
+            <div class="panel">
+                <h2>SIRIAI 파트너십</h2>
+                <p class="subtitle">시리아이는 크리에이터와의 지속적인 파트너십을 지향합니다.<br>이후 진행될 캠페인 제안을 우선으로 받아보시겠어요?</p>
+
+                <div class="input-group" id="group-partnership" style="margin-bottom:0;">
+                    <div class="accordion-item recommended">
+                        <label class="accordion-header">
+                            <input type="checkbox" id="term_pool" checked>
+                            <div class="indicator-check"></div>
+                            <span class="acc-title" style="color:var(--accent-deep);">[선택] SIRIAI 파트너십 후보 풀 등록 <span class="badge">추천</span></span>
+                            <button type="button" class="acc-toggle open" onclick="toggleAccordion(event,'desc-pool',this)" aria-label="설명 보기">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><path d="M6 9l6 6 6-6"/></svg>
+                            </button>
+                        </label>
+                        <div id="desc-pool" class="accordion-body" style="display:block;">
+                            <p style="margin-bottom:0.7rem;">SIRIAI는 루솜·잇퓨·야다 외에도 다양한 패션·뷰티 브랜드 캠페인을 운영합니다. 이번 캠페인 선정 여부와 무관하게, 향후 브랜드에 적합하다고 판단될 경우 우선적으로 제안드릴 수 있습니다.</p>
+                            <p style="font-size:0.78rem;color:var(--text-muted);">※ 본 항목은 이번 캠페인 선정 여부와 무관합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group" id="group-email" style="margin-top:1.6rem;margin-bottom:0;">
+                    <label class="label-text">이메일 주소 (선택)</label>
+                    <span class="label-desc">이후 SIRIAI의 캠페인 안내·우선 제안을 받고 싶으시면 입력해 주세요.</span>
+                    <input type="email" id="inf_email" class="form-control" placeholder="example@email.com">
+                    <div class="error-msg">올바른 형식의 이메일을 입력해 주세요.</div>
+                </div>
+
+                <div class="fine-print">
+                    · 선정 시 문자 메시지 또는 유선으로 개별 안내드립니다.<br>
+                    · 정산: 콘텐츠 업로드 확인 및 서류 제출 후 1~2주 이내 지급됩니다.<br>
+                    · 수집된 개인정보는 캠페인 진행 및 배송 목적 외에 활용되지 않습니다.
+                </div>
+
+                <div class="btn-wrapper">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep()">이전</button>
+                    <button type="button" id="submitBtn" class="btn btn-primary" onclick="submitForm()">지원 완료하기</button>
+                </div>
+            </div>
+            <div class="footer-brand">Presented by SIRIAI · 시리아이</div>
+        </div>
+
+        <!-- ===== STEP 5 : SUCCESS ===== -->
+        <div class="form-step" id="step-5">
+            <div class="panel" style="text-align:center; padding: 3.6rem 1.7rem;">
+                <div style="width:68px;height:68px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;margin:0 auto 1.8rem;color:#fff;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:32px;height:32px;"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h2 style="font-size:1.5rem;margin-bottom:0.9rem;">지원이 완료되었습니다</h2>
+                <p class="subtitle" style="margin-bottom:2.2rem;">캠페인 크루로 지원해 주셔서 감사합니다.<br>브랜드 핏이 맞는 크리에이터님께 개별 DM으로 최우선 연락드리겠습니다.</p>
+                <button class="btn btn-secondary btn-block" onclick="location.reload();">처음으로 돌아가기</button>
+            </div>
+            <div class="footer-brand">Presented by SIRIAI · 시리아이</div>
+        </div>
+
+    </div><!-- /app-container -->
+  </div><!-- /shell -->
+
+    <!-- ===== BOTTOM SHEETS ===== -->
+    <div class="sheet-overlay" id="sheetOverlay" onclick="closeSheet()"></div>
+
+    <!-- 루솜 -->
+    <div class="sheet" id="sheet-lusom">
+        <div class="sheet-grip"></div>
+        <img class="sheet-hero" src="https://lusom-guide.vercel.app/image/%EB%B0%B0%EB%84%882.PNG" alt="루솜 제품" loading="lazy">
+        <div class="sheet-head">
+            <div><h3>루솜 <span style="font-size:0.9rem;color:var(--text-muted);">LUSOM</span></h3><div class="en">Let’s Love Nature · 비건 클린뷰티</div></div>
+            <button class="sheet-close" onclick="closeSheet()">✕</button>
+        </div>
+        <div class="sheet-content">
+            <div class="sheet-section">
+                <p>피부와 환경 모두를 고려한 비건 클린뷰티 브랜드. 자연 친화적이고 윤리적인 성분 사용을 핵심 가치로, 지속 가능한 뷰티를 지향합니다. 대표 제품은 쫀득한 밀착력의 ‘발효미 토너패드(찹쌀떡 패드)’.</p>
+            </div>
+            <div class="sheet-section">
+                <div class="cond-grid">
+                    <div class="cond-box"><div class="k">업로드 일정</div><div class="v">6.18 – 6.22</div></div>
+                    <div class="cond-box"><div class="k">콘텐츠 타입</div><div class="v">Instagram Reels</div></div>
+                    <div class="cond-box"><div class="k">고료</div><div class="v">50,000원</div></div>
+                    <div class="cond-box"><div class="k">제공 제품</div><div class="v">발효미 토너패드</div></div>
+                </div>
+            </div>
+            <div class="sheet-section">
+                <h4>✅ 미션</h4>
+                <ul>
+                    <li>인스타그램 릴스 1건 업로드 (3개월 이상 유지)</li>
+                    <li>공동 작업자 <b>@lusom_official</b> 필수 태그</li>
+                    <li>맨피부 사용 + 사용 전후 수분광채 결과 강조</li>
+                    <li>제작 콘텐츠의 2차 활용 권한 동의</li>
+                </ul>
+            </div>
+            <div class="sheet-section">
+                <h4># 필수 해시태그</h4>
+                <div class="tag-row">
+                    <span class="tag">#루솜</span><span class="tag">#LUSOM</span><span class="tag">#발효미토너패드</span><span class="tag">#찹쌀떡패드</span><span class="tag">#화잘먹찹쌀떡패드</span>
+                </div>
+            </div>
+            <div class="sheet-section">
+                <h4>📌 레퍼런스</h4>
+                <div class="ref-row">
+                    <a class="ref-link" href="https://www.instagram.com/reels/DQBvapOE5Ur/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>레퍼런스 1</a>
+                    <a class="ref-link" href="https://www.instagram.com/reels/DUsaQJbD1cB/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>레퍼런스 2</a>
+                    <a class="ref-link" href="https://www.instagram.com/p/DYQ_47EyZwu/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>레퍼런스 3</a>
+                    <a class="ref-link" href="https://www.instagram.com/p/DXO2EL8E2Sq/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>레퍼런스 4</a>
+                </div>
+            </div>
+            <a class="guide-link" href="https://lusom-guide.vercel.app/" target="_blank" rel="noopener">전체 가이드라인 보기 →</a>
+        </div>
+    </div>
+
+    <!-- 잇퓨 -->
+    <div class="sheet" id="sheet-itfu">
+        <div class="sheet-grip"></div>
+        <img class="sheet-hero" src="https://itfu-guideline.vercel.app/image/%EC%A0%9C%ED%92%88.PNG" alt="잇퓨 제품" loading="lazy">
+        <div class="sheet-head">
+            <div><h3>잇퓨 <span style="font-size:0.9rem;color:var(--text-muted);">it:fu</span></h3><div class="en">피부 고민과 스킨 솔루션을 잇다</div></div>
+            <button class="sheet-close" onclick="closeSheet()">✕</button>
+        </div>
+        <div class="sheet-content">
+            <div class="sheet-section">
+                <p>무신사 입점 · 지그재그에서 주목받는 스킨케어 브랜드. 약국·피부과에도 입점된 검증된 브랜드로, 대표 ‘순율크림’은 쿠팡·네이버·지그재그 1위를 달성했습니다.</p>
+            </div>
+            <div class="sheet-section">
+                <div class="cond-grid">
+                    <div class="cond-box"><div class="k">업로드 일정</div><div class="v">6.24 – 6.27</div></div>
+                    <div class="cond-box"><div class="k">콘텐츠 타입</div><div class="v">Instagram Reels</div></div>
+                    <div class="cond-box"><div class="k">고료</div><div class="v">50,000원</div></div>
+                    <div class="cond-box"><div class="k">제공 제품</div><div class="v">순율 앰플 · 순율크림</div></div>
+                </div>
+                <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.5rem;">* 프로모션에 따라 제품/일정이 변동될 수 있습니다.</p>
+            </div>
+            <div class="sheet-section">
+                <h4>✅ 미션</h4>
+                <ul>
+                    <li>인스타그램 릴스 1건 업로드 (Before/After 필수)</li>
+                    <li>공동 작업자 <b>@itfu_official</b> · <b>@itfu_global</b> 필수 태그</li>
+                    <li>핵심 정보 및 핵심 성분을 영상·캡션에 노출</li>
+                    <li>3개월 2차 활용 권한 동의</li>
+                </ul>
+            </div>
+            <div class="sheet-section">
+                <h4># 필수 해시태그</h4>
+                <div class="tag-row">
+                    <span class="tag">#잇퓨</span><span class="tag">#잇퓨앰플</span><span class="tag">#모공앰플</span><span class="tag">#수딩앰플</span><span class="tag">#히알루론산앰플</span><span class="tag">#율무앰플</span>
+                </div>
+            </div>
+            <div class="sheet-section">
+                <h4>📌 레퍼런스</h4>
+                <div class="ref-row">
+                    <a class="ref-link" href="https://www.instagram.com/p/DWZHL0dj-lk/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>레퍼런스 1</a>
+                    <a class="ref-link" href="https://www.instagram.com/p/DWXz2EXycJq/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>레퍼런스 2</a>
+                    <a class="ref-link" href="https://www.instagram.com/reel/DX5ukX9R083/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>레퍼런스 3</a>
+                </div>
+            </div>
+            <a class="guide-link" href="https://itfu-guideline.vercel.app/" target="_blank" rel="noopener">전체 가이드라인 보기 →</a>
+        </div>
+    </div>
+
+    <!-- 야다 -->
+    <div class="sheet" id="sheet-yadah">
+        <div class="sheet-grip"></div>
+        <img class="sheet-hero" src="https://yadah-guide.vercel.app/%EB%B0%A4.png" alt="야다 클렌징밤" loading="lazy">
+        <div class="sheet-head">
+            <div><h3>야다 <span style="font-size:0.9rem;color:var(--text-muted);">YADAH</span></h3><div class="en">알다, 경험하다 · 비건 스킨케어</div></div>
+            <button class="sheet-close" onclick="closeSheet()">✕</button>
+        </div>
+        <div class="sheet-content">
+            <div class="sheet-section">
+                <p>히브리어로 몸과 마음을 다해 ‘알다, 경험하다’라는 뜻과 함께, 소비자가 자신의 피부를 위해 ‘지혜를 깨우치다’라는 의미를 담은 비건 스킨케어 브랜드. 30개국·1,300여 채널에 입점한 저자극 데일리 포뮬러. 대표 ‘그린티 퓨어 클렌징밤(100ml)’.</p>
+            </div>
+            <div class="sheet-section">
+                <div class="cond-grid">
+                    <div class="cond-box"><div class="k">업로드 일정</div><div class="v">6.24 – 6.26</div></div>
+                    <div class="cond-box"><div class="k">콘텐츠 타입</div><div class="v">Reels (20초 이상)</div></div>
+                    <div class="cond-box"><div class="k">고료</div><div class="v">50,000원</div></div>
+                    <div class="cond-box"><div class="k">제공 제품</div><div class="v">그린티 클렌징밤</div></div>
+                </div>
+            </div>
+            <div class="sheet-section">
+                <h4>🎬 콘셉트 (택 1)</h4>
+                <ul>
+                    <li>마스카라 리무버 — 자극 없이 부드러운 메이크업 제거</li>
+                    <li>트러블 예방 클렌징 — 모공 막힘 없는 딥클렌징</li>
+                    <li>원스텝 밤투폼 — 밤 → 폼 올인원 클렌징</li>
+                </ul>
+            </div>
+            <div class="sheet-section">
+                <h4>✅ 미션</h4>
+                <ul>
+                    <li>인스타그램 릴스 1건 업로드 (3개월 이상 유지)</li>
+                    <li>공동 작업자 <b>@yadah.official</b> 필수 태그</li>
+                    <li>브랜드 소개 + 선택 콘셉트 설명 캡션 포함</li>
+                    <li>사전 동의 없는 게시물 삭제 불가</li>
+                </ul>
+            </div>
+            <div class="sheet-section">
+                <h4># 필수 해시태그</h4>
+                <div class="tag-row">
+                    <span class="tag">#야다</span><span class="tag">#yadah</span><span class="tag">#클렌징밤</span>
+                </div>
+            </div>
+            <a class="guide-link" href="https://yadah-guide.vercel.app/campaign-a" target="_blank" rel="noopener">전체 가이드라인 보기 →</a>
+        </div>
+    </div>
+
+    <!-- ===== LOGIC ===== -->
+    <script>
+        // ====== CONFIG ======
+        // 배포 후 Google Apps Script 웹앱 URL로 교체하세요.
+        const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbwXm5_SZYju4GLV2gmoulfUAZGx95tvRTQSXjhhbe3q82K3QqgEOSXSS8gZkxFWAPY/exec';
+
+        let currentStep = 0;
+        const totalSteps = 5;
+
+        function updateProgress() {
+            const bar = document.getElementById('progressBar');
+            const hero = document.getElementById('hero');
+            if (currentStep === 0) {
+                bar.style.width = '0%';
+                if (hero) hero.style.display = 'flex';
+            } else {
+                bar.style.width = (currentStep / totalSteps) * 100 + '%';
+                if (hero) hero.style.display = 'none';
+            }
+        }
+
+        function toggleAccordion(e, id, btn) {
+            e.preventDefault();
+            const el = document.getElementById(id);
+            const open = el.style.display === 'block';
+            el.style.display = open ? 'none' : 'block';
+            btn.classList.toggle('open', !open);
+        }
+
+        function toggleAllCampaigns() {
+            const boxes = document.querySelectorAll('input[name="campaign"]');
+            const allChecked = [...boxes].every(b => b.checked);
+            boxes.forEach(b => b.checked = !allChecked);
+            document.getElementById('toggleAll').textContent = allChecked ? '전체 선택' : '전체 해제';
+            document.getElementById('group-campaign').classList.remove('has-error');
+        }
+        document.querySelectorAll('input[name="campaign"]').forEach(b => {
+            b.addEventListener('change', () => {
+                const boxes = document.querySelectorAll('input[name="campaign"]');
+                document.getElementById('toggleAll').textContent =
+                    [...boxes].every(x => x.checked) ? '전체 해제' : '전체 선택';
+            });
+        });
+
+        function validateStep(step) {
+            let ok = true;
+            if (step === 1) {
+                const checked = document.querySelectorAll('input[name="campaign"]:checked').length > 0;
+                document.getElementById('group-campaign').classList.toggle('has-error', !checked);
+                if (!checked) ok = false;
+            } else if (step === 2) {
+                const term = document.getElementById('term_main');
+                document.getElementById('group-terms').classList.toggle('has-error', !term.checked);
+                if (!term.checked) ok = false;
+                ['name','phone','age','address'].forEach(k => {
+                    const el = document.getElementById('inf_' + k);
+                    const bad = !el.value.trim();
+                    document.getElementById('group-' + k).classList.toggle('has-error', bad);
+                    if (bad) ok = false;
+                });
+            } else if (step === 3) {
+                const insta = document.getElementById('inf_insta');
+                const bad = !insta.value.trim() || !insta.value.includes('http');
+                document.getElementById('group-insta').classList.toggle('has-error', bad);
+                if (bad) ok = false;
+            } else if (step === 4) {
+                const email = document.getElementById('inf_email');
+                const bad = email.value.trim() !== '' && !email.value.includes('@');
+                document.getElementById('group-email').classList.toggle('has-error', bad);
+                if (bad) ok = false;
+            }
+            return ok;
+        }
+
+        function nextStep() {
+            if (currentStep > 0 && !validateStep(currentStep)) return;
+            document.getElementById('step-' + currentStep).classList.remove('active');
+            currentStep++;
+            document.getElementById('step-' + currentStep).classList.add('active');
+            updateProgress();
+            window.scrollTo(0, 0);
+        }
+        function prevStep() {
+            document.getElementById('step-' + currentStep).classList.remove('active');
+            currentStep--;
+            document.getElementById('step-' + currentStep).classList.add('active');
+            updateProgress();
+            window.scrollTo(0, 0);
+        }
+
+        function getSelectedCampaigns() {
+            return [...document.querySelectorAll('input[name="campaign"]:checked')].map(b => b.value);
+        }
+
+        function submitForm() {
+            if (!validateStep(4)) return;
+            const btn = document.getElementById('submitBtn');
+            btn.innerHTML = '처리중… <svg style="animation:spin 1s linear infinite;margin-left:8px;width:16px;height:16px;" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="rgba(255,255,255,0.3)" stroke-width="3"/><path d="M4 12a8 8 0 018-8" stroke="#fff" stroke-width="3" stroke-linecap="round"/></svg>';
+            btn.style.pointerEvents = 'none';
+
+            const selected = getSelectedCampaigns();
+            const mark = v => selected.includes(v) ? 'O' : 'X';
+            const payload = {
+                timestamp: new Date().toISOString(),
+                camp_lusom: mark('루솜 (LUSOM)'),
+                camp_itfu:  mark('잇퓨 (it:fu)'),
+                camp_yadah: mark('야다 (YADAH)'),
+                term_main: document.getElementById('term_main').checked ? 'Y' : 'N',
+                inf_name: document.getElementById('inf_name').value,
+                inf_phone: document.getElementById('inf_phone').value,
+                inf_age: document.getElementById('inf_age').value,
+                inf_address: document.getElementById('inf_address').value,
+                inf_insta: document.getElementById('inf_insta').value,
+                inf_others: document.getElementById('inf_others').value,
+                inf_email: document.getElementById('inf_email').value,
+                term_pool: document.getElementById('term_pool').checked ? 'Y' : 'N'
+            };
+            console.log('Submitting:', payload);
+
+            const goSuccess = () => {
+                document.getElementById('step-' + currentStep).classList.remove('active');
+                currentStep++;
+                document.getElementById('step-' + currentStep).classList.add('active');
+                updateProgress();
+                window.scrollTo(0, 0);
+            };
+
+            if (WEBHOOK_URL === 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL') {
+                setTimeout(goSuccess, 1000); // 데모 모드 (URL 미설정 시)
+            } else {
+                fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                    body: JSON.stringify(payload)
+                }).then(goSuccess).catch(() => {
+                    alert('전송 중 오류가 발생했습니다. 다시 시도해 주세요.');
+                    btn.innerHTML = '지원 완료하기';
+                    btn.style.pointerEvents = 'auto';
+                });
+            }
+        }
+
+        function openSheet(id) {
+            document.getElementById('sheetOverlay').classList.add('active');
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSheet() {
+            document.getElementById('sheetOverlay').classList.remove('active');
+            document.querySelectorAll('.sheet').forEach(s => s.classList.remove('active'));
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>
